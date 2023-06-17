@@ -57,6 +57,10 @@ body {
   padding-bottom: 2.4rem;
 }
 
+.conteudo h1 {
+  animation: topdown 700ms 350ms backwards;
+}
+
 .conteudo a {
   display: inline-block;
   border: 2px solid #ffffff;
@@ -68,17 +72,20 @@ body {
   line-height: 1.71;
   text-transform: uppercase;
   color: #ffffff;
+
+  animation: downtop 700ms 350ms backwards;
 }
 
 .conteudo a:hover {
-  color: #70e;
-  border: 2px solid #70e;
+  background-color: #ffffff;
+  color: #02799d;
 }
 
 .content-exploration,
 .content-universe {
   padding-top: 6.4rem;
   padding-left: 10rem;
+  animation: left-to-right 700ms 350ms backwards;
 }
 
 .content-exploration p,
@@ -96,4 +103,40 @@ body {
   height: 100vh;
   top: 0;
   z-index: -1;
+}
+
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
