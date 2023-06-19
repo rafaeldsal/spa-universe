@@ -27,6 +27,7 @@ body {
 
 .menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 3.2rem;
 }
 
@@ -85,7 +86,7 @@ body {
 .content-universe {
   padding-top: 6.4rem;
   padding-left: 10rem;
-  animation: left-to-right 700ms 350ms backwards;
+  animation: left-to-right 1s 250ms backwards;
 }
 
 .content-exploration p,
